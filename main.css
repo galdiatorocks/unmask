@@ -31,10 +31,35 @@ body, #data{
   width: 0;
 }
 
+#sm-handles{
+  display: flex;
+}
 
-#countdown{
-  margin-top: 2em;
-  
+.sm-icon{
+  height: 40px;
+  width: 40px;
+  margin: 0 5px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sm-icon>img{
+  max-height: 60%;
+  margin:auto;
+}
+
+.fb:hover{
+  border: #3b5998 1px solid;
+}
+
+.insta:hover{
+  border: #dd2a7b 1px solid;
+}
+
+.twitter:hover{
+  border: #00acee 1px solid;
 }
 
 #clockdiv{
