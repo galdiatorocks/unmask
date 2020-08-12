@@ -33,7 +33,7 @@ body, #data{
 
 #clockdiv{
   font-family: sans-serif;
-  color: #fff;
+  color: black;
   display: inline-block;
   font-weight: 100;
   text-align: center;
@@ -81,7 +81,7 @@ footer{
   }
 
   #clockdiv{
-    /* color: black; */
+    color: white;
   }
   #countdown{
     margin:0;
