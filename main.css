@@ -55,6 +55,7 @@ body, #data{
   /* background: #00816A; */
   background: black;
   display: inline-block;
+  color: white
 }
 
 .smalltext{
