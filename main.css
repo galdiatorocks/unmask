@@ -26,6 +26,12 @@ body, #data{
   width: 80%
 }
 
+#name, #namelabel{
+  visibility: hidden;
+  width: 0;
+}
+
+
 #countdown{
   margin-top: 2em;
   
