@@ -85,9 +85,9 @@
         <p>Unmask is coming soon on <time datetime="2020-08-22">22nd August 2020</time></p>
         <form name="get-email" href="">
           <label id= "namelabel" for="name"></label>
-          <input tabindex="0" type="text" id="name" name="name">
+          <input type="text" id="name" name="name">
           <label for="email"></label>
-          <input tabindex="0" type="email" id="email" name="email">
+          <input tabindex="0" type="email" id="email" name="email" placeholder="yourname@google.com">
           <input type="submit" value="Notify me">
         </form>      
     </section>
@@ -118,7 +118,8 @@
   
 <script src="normalize/vendor/modernizr-3.11.2.min.js"></script>
 <script src="normalize/plugins.js"></script>
-<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+<script src="https://unpkg.com/unfetch/polyfill"></script>
+<!-- <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script> -->
 <script src="main.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
