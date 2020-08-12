@@ -87,7 +87,7 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbyzuywTVWnElInuXtius1
 const form = document.forms['get-email']
 
   form.addEventListener('submit', e => {
-    e.preventDefault()
+    // e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => console.log('Success!', response))
       .catch(error => console.error('Error!', error.message))
