@@ -90,5 +90,7 @@ const form = document.forms['get-email']
     // e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
+      .catch(error => console.error('Error!', error.message));
+
+    alert('Succesfully submitted. Thank you!');
   })
