@@ -31,6 +31,24 @@ body, #data{
   width: 0;
 }
 
+#message{
+  padding: 0 50px;
+  text-align: justify;
+  text-align-last: center;
+}
+
+form{
+  margin-bottom: 0 !important;
+}
+
+#submess{
+  color: gray;
+  padding: 0 50px;
+  text-align: justify;
+  text-align-last: center;
+
+}
+
 #sm-handles{
   display: flex;
 }
