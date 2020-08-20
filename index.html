@@ -110,9 +110,13 @@
         <small id="submess">Subscribe above to receive exclusive offers & be the first to know.</small>
 
         <div id="sm-handles">
-          <a href="https://www.facebook.com/unmaskyoursmile" onclick="ga(‘send’, ‘event’, [Social Media], [Click], [Facebook]);” target="_blank"><div id="fb-link" class="sm-icon fb"><img src="img\fb.png"></div></a>
+          <a href="https://www.facebook.com/unmaskyoursmile" onclick="gtag('event', 'FB click', {'event_category' : 'Social Media', 'event_label' : 'Facebook Click'});" target="_blank"><div id="fb-link" class="sm-icon fb"><img src="img\fb.png"></div></a>
+          <a href="https://www.instagram.com/unmaskyoursmile" onclick="gtag('event', 'Insta click', {'event_category' : 'Social Media', 'event_label' : 'Insta Click'});" target="_blank"><div id="insta-link" class="sm-icon insta"><img src="img\insta.png"></div></a>
+          <a href="https://wa.me/916356016259?text=Hello!%20I%20just%20visited%20your%20website.%20I%20am%20interested%20in%20knowing%20more%20about%20unmask." onclick="gtag('event', 'WhatsApp click', {'event_category' : 'Social Media', 'event_label' : 'WhatsApp Click'});" target="_blank"><div id="whatsapp-link" class="sm-icon whatsapp"><img src="img\whatsapp.png"></div></a>
+        
+          <!-- <a href="https://www.facebook.com/unmaskyoursmile" onclick="ga(‘send’, ‘event’, [Social Media], [Click], [Facebook]);” target="_blank"><div id="fb-link" class="sm-icon fb"><img src="img\fb.png"></div></a>
           <a href="https://www.instagram.com/unmaskyoursmile" onclick="ga(‘send’, ‘event’, [Social Media], [Click], [Instagram]);” target="_blank"><div id="insta-link" class="sm-icon insta"><img src="img\insta.png"></div></a>
-          <a href="https://twitter.com/unmaskyoursmile" onclick="ga(‘send’, ‘event’, [Social Media], [Click], [Twitter]);” target="_blank"><div id="twitter-link" class="sm-icon twitter"><img src="img\twitter.png"></div></a>
+          <a href="https://twitter.com/unmaskyoursmile" onclick="ga(‘send’, ‘event’, [Social Media], [Click], [Twitter]);” target="_blank"><div id="twitter-link" class="sm-icon twitter"><img src="img\twitter.png"></div></a> -->
         </div>     
     </section>
     <section id="countdown">
@@ -146,12 +150,6 @@
 <!-- <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script> -->
 <script src="main.js"></script>
 
-<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-<script>
-window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-ga('create', 'UA-175250815-1', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-</script>
-<script src="https://www.google-analytics.com/analytics.js" async></script>
 </body>
 
 </html>
