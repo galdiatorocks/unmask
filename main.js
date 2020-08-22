@@ -38,8 +38,43 @@ document.addEventListener("DOMContentLoaded", function(){
     if (textArray.length) setTimeout(type,500);
 })
 
-//Countdown Timer
-function getTimeRemaining(endtime) {
+//get subscriber email address
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyzuywTVWnElInuXtius19e0cn9mmVIS19Ysb2IH6IQLimMj9k/exec'
+const form = document.forms['get-email']
+
+  form.addEventListener('submit', e => {
+    // e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message));
+
+    alert('Succesfully submitted. Thank you!');
+  })
+
+  //carousel
+  var slides = document.getElementsByClassName("slider-image-div");
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  //next/previous controls
+  function plusSlides(n){
+    slides[slideIndex-1].style.display = "none";
+    showSlides(slideIndex += n);
+  }
+
+  function currentslide(n){
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    slides[slideIndex-1].style.display = "block";
+  }
+
+  //Countdown Timer
+  function getTimeRemaining(endtime) {
     const total = Date.parse(endtime) - Date.parse(new Date());
     const seconds = Math.floor((total / 1000) % 60);
     const minutes = Math.floor((total / 1000 / 60) % 60);
@@ -81,16 +116,3 @@ function getTimeRemaining(endtime) {
   
   const deadline = 'August 22 2020 10:00:00 GMT+0530';
   initializeClock('clockdiv', deadline);
-
-//get subscriber email address
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyzuywTVWnElInuXtius19e0cn9mmVIS19Ysb2IH6IQLimMj9k/exec'
-const form = document.forms['get-email']
-
-  form.addEventListener('submit', e => {
-    // e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message));
-
-    alert('Succesfully submitted. Thank you!');
-  })
