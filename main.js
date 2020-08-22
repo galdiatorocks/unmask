@@ -52,11 +52,13 @@ const form = document.forms['get-email']
   })
 
   //carousel
+  var slides = document.getElementsByClassName("slider-image-div");
   var slideIndex = 1;
   showSlides(slideIndex);
 
   //next/previous controls
   function plusSlides(n){
+    slides[slideIndex-1].style.display = "none";
     showSlides(slideIndex += n);
   }
 
@@ -66,12 +68,8 @@ const form = document.forms['get-email']
 
   function showSlides(n) {
     var i;
-    var slides = document.getElementsByClassName("slider-image-div");
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
     slides[slideIndex-1].style.display = "block";
   }
 
