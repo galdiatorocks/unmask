@@ -30,6 +30,7 @@ function erase(){
     } else {
         textArrayIndex++;
         if(textArrayIndex>=textArray.length) textArrayIndex=0;
+        plusSlides(1);
         setTimeout(type, typingDelay+200);
     }
 }
