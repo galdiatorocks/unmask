@@ -21,8 +21,10 @@
 html{
   scroll-behavior: smooth ;
 }
+
 #above{
     width: 90%;
+    margin-top: 2em;
 }
 
 body, #data{
@@ -37,7 +39,7 @@ body, #data{
 }
 
 #main-logo{
-  width: 80%
+  width: 80%;
 }
 
 #name, #namelabel{
@@ -140,7 +142,12 @@ form{
   padding: 5px;
   border-radius: 10px;
   box-shadow: -7px -7px 14px #cbced1,
-            7px 7px 14px #fff;
+               7px 7px 14px #fff;
+}
+
+#anti-fog{
+  box-shadow: inset 6px 6px 10px 0 #cbced1, 
+              inset -6px -6px 10px 0 #fff;
 }
 
 .feature-img{
