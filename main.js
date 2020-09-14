@@ -61,12 +61,14 @@ const form = document.forms['get-email']
 
   //Features Description
   function changeZ(id){
-    var descriptions = document.getElementsByClassName("feature-desc");  
+    const descriptions = document.getElementsByClassName("feature-desc");
+    const imgCont = document.getElementsByClassName("img-cont")
     for (let i=0; i<descriptions.length; i++){
       descriptions[i].style.zIndex= -1;
+      imgCont[i].style.boxShadow = "-7px -7px 14px #cbced1, 7px 7px 14px #fff";
     }
     document.getElementById(id + "-desc").style.zIndex = 90;
-    // document.getElementById(id).style.boxShadow = "inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);"
+    document.getElementById(id).style.boxShadow = "inset 6px 6px 10px 0 #cbced1, inset -6px -6px 10px 0 #fff";
   }
 
   //carousel

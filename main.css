@@ -21,8 +21,10 @@
 html{
   scroll-behavior: smooth ;
 }
+
 #above{
     width: 90%;
+    margin-top: 2em;
 }
 
 body, #data{
@@ -37,7 +39,7 @@ body, #data{
 }
 
 #main-logo{
-  width: 80%
+  width: 80%;
 }
 
 #name, #namelabel{
@@ -140,7 +142,12 @@ form{
   padding: 5px;
   border-radius: 10px;
   box-shadow: -7px -7px 14px #cbced1,
-            7px 7px 14px #fff;
+               7px 7px 14px #fff;
+}
+
+#anti-fog{
+  box-shadow: inset 6px 6px 10px 0 #cbced1, 
+              inset -6px -6px 10px 0 #fff;
 }
 
 .feature-img{
@@ -152,13 +159,16 @@ form{
 #feature-desc{
   position: relative;
   height: 12em;
+  margin: 2em auto;
 }
 
 .feature-desc{
   position: absolute;
-  top: 0;
-  left: 0;
+  /* top: 0;
+  left: 0; */
   height: 12em;
+  padding-left: 2em;
+  padding-right: 2em;
   width: 100%;
   background-color: white;
   text-align: justify;
