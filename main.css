@@ -152,13 +152,16 @@ form{
 #feature-desc{
   position: relative;
   height: 12em;
+  margin: 2em auto;
 }
 
 .feature-desc{
   position: absolute;
-  top: 0;
-  left: 0;
+  /* top: 0;
+  left: 0; */
   height: 12em;
+  padding-left: 2em;
+  padding-right: 2em;
   width: 100%;
   background-color: white;
   text-align: justify;
