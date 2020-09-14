@@ -7,6 +7,24 @@
   word-break: break-word; /* to stop overflow due to long words */
 }
 
+:root{
+  --pricol1: #ffb500, rgb(255, 191, 0);
+  --pricol2: #838383, rgb(131, 131, 131);
+  --pricol3: #000000, rgb(0, 0, 0);
+  --seccol1: #f038ff, rgb(240, 56, 255);
+  --seccol2: #7ae7c7, rgb(122, 231, 199);
+  --seccol3: #6A56FF, rgb(82, 72, 156);
+  --font1: "Comfortaa", sans-serif;
+  --font2: "Passion One", sans-serif;
+}
+
+html{
+  scroll-behavior: smooth ;
+}
+#above{
+    width: 90%;
+}
+
 body, #data{
   display: flex;
   flex-direction: column;
@@ -27,10 +45,25 @@ body, #data{
   width: 0;
 }
 
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#yt-wrap, #yt-player{
+  margin-top: 2em;
+  margin-bottom: 3em;
+}
+
 #message{
+  /* width: 80%; */
   padding: 0 50px;
   text-align: justify;
   text-align-last: center;
+  font-size: large;
+  font-weight: normal;
 }
 
 form{
@@ -47,6 +80,7 @@ form{
 
 #sm-handles{
   display: flex;
+  margin: 2em auto;
 }
 
 .sm-icon{
@@ -78,6 +112,66 @@ form{
 
 .twitter:hover{
   border: #00acee 1px solid;
+}
+
+#features{
+  width: 100%;
+  text-align: center;
+}
+
+#fig-icons{
+  display: flex;
+  align-content: center;
+  overflow-x: auto;
+  margin-top: 1em;
+}
+
+.feature-fig{
+  width: 90px;
+  margin: 1em;
+  color: #838383;
+}
+
+.img-cont{
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: -7px -7px 14px #cbced1,
+            7px 7px 14px #fff;
+}
+
+.feature-img{
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+}
+
+#feature-desc{
+  position: relative;
+  height: 12em;
+}
+
+.feature-desc{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 12em;
+  width: 100%;
+  background-color: white;
+  text-align: justify;
+  text-align-last: center;
+}
+
+.h2-feature{
+  font-size: large;
+  font-weight: normal;
+}
+
+#anti-fog-desc{
+  z-index: 2;
 }
 
 #carousel{
@@ -160,17 +254,24 @@ form{
 
 footer{
   padding: 0.2em;
+  z-index: 99;
 }
 
 @media only screen and (min-width: 60em) {
   /* Style adjustments for viewports that meet the condition */
-  body{
+  #above{
+    display: flex;
     flex-direction: row;
-    width: 100%;
   }
 
   #data{
     width: 50%;
+    margin-left: 50vw;
+  }
+
+  .feature-desc{
+    padding: auto 4em;
+    height: 8em;
   }
 
   #clockdiv{
@@ -178,6 +279,9 @@ footer{
   }
 
   #carousel{
+    position: fixed;
+    left: 0;
+    top: 0;
     margin: 0;
     height: 100vh;
     width: 50%;
@@ -208,8 +312,6 @@ footer{
   /* Countdown */
 
   footer{
-    position: absolute;
-    bottom:0;
   }
 }
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */

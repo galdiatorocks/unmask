@@ -1,6 +1,7 @@
 // Typewriter text animation
 const typedTextSpan = document.querySelector(".type-anime")
 const cursorSpan = document.querySelector(".cursor-anime")
+const figIcons = document.getElementById("fig-icons")
 
 const textArray = document.querySelector(".type-anime").getAttribute('data-elements').split(','); //["WEB DEVELOPERS", "CREATIVE", "AMBITIOUS"];
 const typingDelay = 100;
@@ -31,6 +32,12 @@ function erase(){
         textArrayIndex++;
         if(textArrayIndex>=textArray.length) textArrayIndex=0;
         plusSlides(1);
+        if (figIcons.scrollLeft !== figIcons.scrollWidth) {
+          figIcons.scrollTo(figIcons.scrollLeft + 100, 0);
+        } else {
+          console.log("Scroll End")
+          figIcons.scrollTo(0, 0);
+        }
         setTimeout(type, typingDelay+200);
     }
 }
@@ -51,6 +58,16 @@ const form = document.forms['get-email']
 
     alert('Succesfully submitted. Thank you!');
   })
+
+  //Features Description
+  function changeZ(id){
+    var descriptions = document.getElementsByClassName("feature-desc");  
+    for (let i=0; i<descriptions.length; i++){
+      descriptions[i].style.zIndex= -1;
+    }
+    document.getElementById(id + "-desc").style.zIndex = 90;
+    // document.getElementById(id).style.boxShadow = "inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);"
+  }
 
   //carousel
   var slides = document.getElementsByClassName("slider-image-div");
@@ -116,4 +133,4 @@ const form = document.forms['get-email']
   }
   
   const deadline = 'August 22 2020 10:00:00 GMT+0530';
-  initializeClock('clockdiv', deadline);
+  // initializeClock('clockdiv', deadline);
