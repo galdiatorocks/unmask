@@ -22,6 +22,10 @@ html{
   scroll-behavior: smooth ;
 }
 
+a, a:visited{
+  color: inherit;
+}
+
 #above{
     width: 90%;
     margin-top: 2em;
@@ -186,6 +190,26 @@ form{
   z-index: 2;
 }
 
+#why{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  width: 90%;
+}
+
+#hindu-pie{
+}
+
+#quote-name{
+  width: 100%;
+  text-align: right;
+}
+
+#smile-talk{
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
 #carousel{
   position: relative;
   width: 100%;
