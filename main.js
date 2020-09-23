@@ -68,7 +68,7 @@ const form = document.forms['get-email']
       imgCont[i].style.boxShadow = "-7px -7px 14px #cbced1, 7px 7px 14px #fff";
     }
     document.getElementById(id + "-desc").style.zIndex = 90;
-    document.getElementById(id).style.boxShadow = "inset 6px 6px 10px 0 #cbced1, inset -6px -6px 10px 0 #fff";
+    document.getElementById(id).style.boxShadow = "inset 6px 6px 10px 0 #cbced1, inset -6px -6px 10px 0 #cbced1";
   }
 
   //carousel
